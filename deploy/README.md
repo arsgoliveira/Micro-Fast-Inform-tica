@@ -1,47 +1,53 @@
-# Micro Fast Informática — Site
+# Micro Fast Informatica
 
-Site institucional da Micro Fast Informática. Pasta pronta para deploy na HostGator e publicação no GitHub.
+Site institucional da Micro Fast Informatica desenvolvido para apresentar servicos, reforcar autoridade da marca e direcionar visitantes para contato comercial.
 
-## Estrutura
+## Visao geral
 
-```
+Este projeto possui estrutura enxuta para publicacao, com foco em carregamento rapido, organizacao de arquivos e elementos voltados para conversao, como CTAs para WhatsApp e links institucionais.
+
+## Stack
+
+- HTML
+- CSS
+- JavaScript
+
+## Estrutura principal
+
+```text
 deploy/
-├── index.html          # Página principal
-├── apps.html           # Aplicativos
-├── comandos-rede.html  # Comandos de rede
-├── construction.html   # Portfólio (em construção)
+├── index.html
+├── apps.html
+├── comandos-rede.html
+├── construction.html
 ├── robots.txt
 ├── sitemap.xml
 ├── .htaccess
 ├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── apps/
 ├── deploy-hostgator.bat
 ├── deploy-config.example
 └── README.md
 ```
 
+## Destaques
+
+- Site institucional com foco em apresentacao profissional
+- Paginas extras para aplicativos e conteudo tecnico
+- CTAs de atendimento via WhatsApp
+- Arquivos de SEO tecnico como `robots.txt` e `sitemap.xml`
+- Estrutura preparada para deploy em hospedagem tradicional
+
 ## Deploy HostGator
 
 1. Copie `deploy-config.example` para `deploy-config.local`
-2. Edite `deploy-config.local` e preencha a senha do cPanel
+2. Edite `deploy-config.local` com os dados do ambiente
 3. Execute `deploy-hostgator.bat`
 
-## GitHub
+## Links
 
-Repositório: https://github.com/arsgoliveira/Micro-Fast-Inform-tica
+- Codigo: [github.com/arsgoliveira/Micro-Fast-Inform-tica](https://github.com/arsgoliveira/Micro-Fast-Inform-tica)
+- Demo: [microfastinformatica.online](https://microfastinformatica.online/)
 
-```bash
-cd deploy
-git init
-git add .
-git commit -m "Site Micro Fast - estrutura organizada"
-git remote add origin https://github.com/arsgoliveira/Micro-Fast-Inform-tica.git
-git push -u origin main
-```
+## Objetivo do projeto
 
-## Site
-
-https://microfastinformatica.online/
+Demonstrar a construcao de um site institucional leve e organizado, com foco em presenca digital, clareza de servicos e facilidade de publicacao.

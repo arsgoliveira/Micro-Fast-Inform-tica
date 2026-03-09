@@ -2,3 +2,21 @@
 deploy-config.local
 deploy-agora.ps1
 deploy/deploy-agora.ps1
+
+# Arquivos locais e rascunhos fora do projeto publicado
+COMPARACAO-BRANCHES.md
+DEPLOY-INSTRUCOES.md
+DEPLOY-README.md
+EXEMPLO-NOVA-BRANCH.md
+MELHORIAS-RECOMENDADAS.md
+README-Discord-Atualizado.md
+README.md
+README.txt
+Novo(a) Documento de Texto.txt
+css para testar.txt
+baixar-do-servidor.ps1
+deploy-config.example
+deploy-hostgator.bat
+hero.png
+logo fast.png
+*Favicon*.png

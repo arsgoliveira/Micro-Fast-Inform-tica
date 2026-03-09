@@ -1,0 +1,8 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+RewriteCond %{HTTP_HOST} ^microfastinformatica\.online$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.microfastinformatica\.online$
+RewriteRule ^microfastinformatica\.com\.br$ "http\:\/\/microfastinformatica\.online\/" [R=301,L]
+

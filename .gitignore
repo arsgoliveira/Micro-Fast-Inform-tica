@@ -1,0 +1,4 @@
+# Credenciais de deploy - NUNCA commitar
+deploy-config.local
+deploy-agora.ps1
+deploy/deploy-agora.ps1

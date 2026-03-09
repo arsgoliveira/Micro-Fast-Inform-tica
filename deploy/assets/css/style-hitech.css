@@ -1,0 +1,302 @@
+/* ==========================================================
+   MICRO FAST — TEMA HI-TECH / TECNOLÓGICO
+   Carregado quando body tem classe .theme-hitech
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* -------------------- VARIÁVEIS HI-TECH -------------------- */
+body.theme-hitech {
+  --bg-dark: #0a0e17;
+  --bg-card: #0f1629;
+  --bg-elevated: #151d2e;
+  --neon-cyan: #00d4ff;
+  --neon-blue: #0066ff;
+  --neon-purple: #8b5cf6;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-glow: rgba(0, 212, 255, 0.25);
+}
+
+/* -------------------- BASE -------------------- */
+body.theme-hitech {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* -------------------- CABEÇALHO -------------------- */
+body.theme-hitech .site-header {
+  background: rgba(10, 14, 23, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glow);
+}
+
+body.theme-hitech .nav-list a {
+  color: var(--text-muted);
+}
+body.theme-hitech .nav-list a:hover,
+body.theme-hitech .nav-list a.active {
+  color: var(--neon-cyan);
+  background: rgba(0, 212, 255, 0.08);
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+}
+
+body.theme-hitech .nav-toggle {
+  color: var(--neon-cyan);
+}
+body.theme-hitech .nav-toggle:hover {
+  background: rgba(0, 212, 255, 0.15);
+}
+body.theme-hitech .nav-toggle[aria-expanded="true"] {
+  background: var(--neon-cyan);
+  color: var(--bg-dark);
+}
+
+body.theme-hitech .nav-list {
+  background: var(--bg-elevated);
+  border-left: 1px solid var(--border-glow);
+}
+
+/* -------------------- HERO -------------------- */
+body.theme-hitech .hero-overlay {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(139, 92, 246, 0.03));
+}
+
+body.theme-hitech .hero-left h1 {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #00d4ff, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.2));
+}
+
+body.theme-hitech .hero-left p {
+  color: var(--text-muted);
+}
+
+body.theme-hitech .badges li {
+  color: var(--text-primary);
+}
+body.theme-hitech .badges li i {
+  color: var(--neon-cyan);
+}
+body.theme-hitech .badges li:hover i {
+  color: var(--neon-cyan);
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+}
+
+body.theme-hitech .hero-right img {
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+/* -------------------- BOTÕES -------------------- */
+body.theme-hitech .btn.primary {
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.35);
+}
+body.theme-hitech .btn.primary:hover {
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.5);
+}
+
+body.theme-hitech .btn.ghost {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+body.theme-hitech .btn.ghost:hover {
+  background: rgba(0, 212, 255, 0.15);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+}
+
+/* -------------------- SERVIÇOS / CARDS -------------------- */
+body.theme-hitech .section-title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-cyan);
+}
+
+body.theme-hitech .section-sub {
+  color: var(--text-muted);
+}
+
+body.theme-hitech .service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.06), inset 0 0 20px rgba(0, 212, 255, 0.02);
+}
+body.theme-hitech .service-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.2);
+}
+
+body.theme-hitech .service-card h3 {
+  color: var(--text-primary);
+}
+body.theme-hitech .service-card p {
+  color: var(--text-muted);
+}
+
+body.theme-hitech .service-card img {
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+/* -------------------- SOBRE -------------------- */
+body.theme-hitech .about {
+  background: linear-gradient(180deg, #0d1320, #0a0e17);
+  border-top: 1px solid var(--border-glow);
+}
+
+body.theme-hitech .about-text h2,
+body.theme-hitech .about-text h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-cyan);
+}
+body.theme-hitech .about-text h2::after {
+  background: var(--neon-cyan);
+}
+
+body.theme-hitech .about-text p,
+body.theme-hitech .about-text ul li {
+  color: var(--text-muted);
+}
+body.theme-hitech .about-text ul li::before {
+  color: var(--neon-cyan);
+}
+
+body.theme-hitech .links-row .btn {
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+body.theme-hitech .links-row .btn:hover {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+}
+
+body.theme-hitech .about-photo img {
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.1);
+}
+
+/* -------------------- CONTATO -------------------- */
+body.theme-hitech .section.contact {
+  background: linear-gradient(180deg, #0a0e17, #0d1320);
+  border-top: 1px solid var(--border-glow);
+}
+
+body.theme-hitech .contact-card,
+body.theme-hitech .contact-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.08);
+}
+body.theme-hitech .contact-card:hover,
+body.theme-hitech .contact-form:hover {
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.15);
+}
+
+body.theme-hitech .contact-card h2 {
+  color: var(--neon-cyan);
+}
+body.theme-hitech .contact-card p,
+body.theme-hitech .contact-list li {
+  color: var(--text-muted);
+}
+body.theme-hitech .contact-list a {
+  color: var(--neon-cyan);
+}
+
+body.theme-hitech .contact-form label {
+  color: var(--text-primary);
+}
+body.theme-hitech .contact-form input,
+body.theme-hitech .contact-form textarea {
+  background: var(--bg-elevated);
+  border-color: var(--border-glow);
+  color: var(--text-primary);
+}
+body.theme-hitech .contact-form input::placeholder,
+body.theme-hitech .contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+body.theme-hitech .contact-form input:focus,
+body.theme-hitech .contact-form textarea:focus {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+body.theme-hitech .socials a {
+  background: var(--bg-elevated);
+  color: var(--neon-cyan);
+  border: 1px solid var(--border-glow);
+}
+body.theme-hitech .socials a:hover {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* -------------------- RODAPÉ -------------------- */
+body.theme-hitech .site-footer {
+  border-top-color: var(--border-glow);
+  color: var(--text-muted);
+}
+
+/* -------------------- WHATSAPP (manter verde) -------------------- */
+body.theme-hitech .whatsapp-btn {
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+}
+body.theme-hitech .whatsapp-fab {
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.5);
+}
+
+/* -------------------- BOTÃO TOGGLE TEMA -------------------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border-glow, rgba(0, 212, 255, 0.3));
+  border-radius: 8px;
+  background: transparent;
+  color: var(--neon-cyan, #00d4ff);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.theme-toggle:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+body:not(.theme-hitech) .theme-toggle {
+  border-color: rgba(14, 122, 179, 0.4);
+  color: #0e7ab3;
+}
+body:not(.theme-hitech) .theme-toggle:hover {
+  background: rgba(14, 122, 179, 0.08);
+}
+
+/* -------------------- PÁGINA COMANDOS DE REDE -------------------- */
+body.theme-hitech .guide-content h2 {
+  color: var(--neon-cyan);
+}
+body.theme-hitech .guide-content h3 {
+  color: rgba(0, 212, 255, 0.9);
+}
+body.theme-hitech .guide-content th {
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  color: var(--bg-dark);
+}
+body.theme-hitech .guide-content .toc {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid var(--border-glow);
+}
+body.theme-hitech .guide-content .note {
+  border-left-color: var(--neon-cyan);
+  background: rgba(0, 212, 255, 0.05);
+}

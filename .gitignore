@@ -1,13 +1,7 @@
 # Credenciais de deploy - NUNCA commitar
-deploy-config.local
-deploy-agora.ps1
 deploy/deploy-agora.ps1
-
-# Scripts locais fora do versionamento
-baixar-do-servidor.ps1
-deploy-config.example
-deploy-hostgator.bat
 
 # Pastas locais para organização da raiz
 docs-local/
 assets-originais/
+scripts-local/

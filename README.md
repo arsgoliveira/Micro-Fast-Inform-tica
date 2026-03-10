@@ -1,70 +1,61 @@
 # Micro Fast Informatica
 
-Site institucional da Micro Fast Informatica com foco em apresentacao de servicos, autoridade visual e conversao para atendimento.
+Site institucional da Micro Fast Informatica, desenvolvido para apresentar servicos, reforcar credibilidade da marca e facilitar o contato comercial.
 
-## Visao geral
+## Preview
 
-O projeto apresenta a empresa, seus principais servicos e canais de contato em uma estrutura simples, direta e responsiva. O site combina presenca institucional com foco comercial, destacando manutencao de computadores, criacao de sites, redes e suporte tecnico.
-
-## Acesso
-
+- Site: [microfastinformatica.online](https://microfastinformatica.online/)
 - Repositorio: [arsgoliveira/Micro-Fast-Inform-tica](https://github.com/arsgoliveira/Micro-Fast-Inform-tica)
-- Site publicado: [microfastinformatica.online](https://microfastinformatica.online/)
 
-## Principais destaques
+## Sobre o projeto
 
-- Hero com chamada comercial e CTA para WhatsApp
-- Secao de servicos com foco em conversao
-- Apresentacao profissional da experiencia da empresa
-- Pagina de contato com WhatsApp, telefone, e-mail e formulario
-- Estrutura com sitemap para melhor organizacao das paginas publicas
+Este projeto foi construido como um site estatico, com foco em carregamento rapido, navegacao simples e apresentacao profissional dos servicos da Micro Fast Informatica.
 
-## Servicos apresentados
+A pagina principal destaca:
+- manutencao de computadores
+- criacao de sites
+- redes e suporte tecnico
+- canais de contato
+- portfolio inicial
 
-- Manutencao de computadores
-- Criacao de sites
-- Redes e suporte tecnico
+## Funcionalidades
 
-## Estrutura publica do site
-
-Com base no sitemap publicado, o projeto contem paginas e recursos voltados a conteudo institucional e utilitarios:
-
-- `index.html`
-- `portfolio.html`
-- `ferramentas.html`
-- `apps.html`
-- `app.html`
-- `comandos-rede.html`
-- `comandos-win.html`
+- Hero com CTA para WhatsApp
+- Menu responsivo para mobile
+- Tema claro e tema hi-tech
+- Secao institucional com experiencia e qualificacoes
+- Portfolio com modal
+- Formulario com validacao em tempo real
+- Envio via `mailto`
+- Botao flutuante de WhatsApp
+- `robots.txt` e `sitemap.xml`
+- Scripts de deploy para hospedagem tradicional
 
 ## Tecnologias utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
+- Font Awesome
 
-## Objetivo do projeto
+## Estrutura do projeto
 
-Fortalecer a presenca digital da Micro Fast Informatica com um site leve, claro e profissional, facilitando a apresentacao dos servicos e o contato com clientes residenciais e empresariais.
-
-## Como executar localmente
-
-Como o projeto e estatico, basta abrir o arquivo principal no navegador ou servir a pasta com um servidor local.
-
-### Opcao 1
-
-Abra o arquivo `index.html` diretamente no navegador.
-
-### Opcao 2
-
-Use uma extensao como Live Server no VS Code.
-
-## Contato
-
-- WhatsApp: [Clique para conversar](https://wa.me/5513991368083)
-- E-mail: [contato@microfastinformatica.online](mailto:contato@microfastinformatica.online)
-- LinkedIn: [Antonio Rodrigo](https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/)
-
-## Observacao
-
-Este README foi estruturado com base nas informacoes publicas do repositorio e do site publicado. Se voce quiser, posso fazer a proxima versao mais tecnica quando os arquivos completos do projeto estiverem no workspace.
+```text
+deploy/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── style-hitech.css
+│   ├── images/
+│   ├── js/
+│   │   └── main.js
+│   └── logo.svg
+├── .htaccess
+├── .gitignore
+├── deploy-agora.ps1
+├── deploy-config.example
+├── deploy-hostgator.bat
+├── robots.txt
+├── sitemap.xml
+└── README.md

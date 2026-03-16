@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Hero Micro Fast Informatica</title>
+  <desc id="desc">Ilustracao abstrata com computadores, rede e elementos de tecnologia.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081a2b"/>
+      <stop offset="100%" stop-color="#0e7ab3"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#17c0ff"/>
+      <stop offset="100%" stop-color="#8be9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <g opacity="0.12" stroke="#ffffff">
+    <path d="M0 100h1200M0 220h1200M0 340h1200M0 460h1200M0 580h1200"/>
+    <path d="M120 0v700M300 0v700M480 0v700M660 0v700M840 0v700M1020 0v700"/>
+  </g>
+  <rect x="120" y="150" width="430" height="260" rx="18" fill="#0f2740" stroke="#58d7ff" stroke-width="4"/>
+  <rect x="160" y="190" width="350" height="180" rx="10" fill="#102f4c"/>
+  <circle cx="870" cy="210" r="82" fill="#0f2740" stroke="#58d7ff" stroke-width="4"/>
+  <circle cx="970" cy="330" r="60" fill="#0f2740" stroke="#58d7ff" stroke-width="4"/>
+  <circle cx="760" cy="360" r="54" fill="#0f2740" stroke="#58d7ff" stroke-width="4"/>
+  <path d="M550 280h138M820 248l-86 82M922 324l-98 22" stroke="url(#panel)" stroke-width="8" stroke-linecap="round"/>
+  <text x="120" y="520" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#ffffff">MICRO FAST INFORMATICA</text>
+  <text x="120" y="580" font-family="Arial, sans-serif" font-size="30" fill="#d9f6ff">Suporte, manutencao, redes e criacao de sites</text>
+</svg>

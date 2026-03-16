@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Micro Fast Informatica</title>
+  <desc id="desc">Logo em gradiente azul com as letras MF.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7ab3"/>
+      <stop offset="100%" stop-color="#0b5f8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="40" fill="url(#bg)"/>
+  <circle cx="110" cy="110" r="78" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.35"/>
+  <path d="M62 150V70h24l24 40 24-40h24v80h-22v-43l-18 30h-16l-18-30v43H62z" fill="#ffffff"/>
+  <text x="110" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#dff4ff">MICRO FAST</text>
+</svg>

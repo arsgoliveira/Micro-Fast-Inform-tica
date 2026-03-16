@@ -11,8 +11,8 @@ REM ============================================================
 set "LOCAL_PATH=%~dp0"
 set "LOCAL_PATH=%LOCAL_PATH:~0,-1%"
 
-set "FTP_HOST=ftp.microfastinformatica.online"
-set "FTP_USER=hg2b2794"
+set "FTP_HOST=ftp.seu-dominio.com"
+set "FTP_USER=SEU_USUARIO_FTP"
 set "FTP_PASS=SUA_SENHA_CPANEL"
 set "REMOTE_PATH=/public_html"
 
@@ -29,8 +29,23 @@ if exist "%~dp0deploy-config.local" (
 
 if "%FTP_PASS%"=="SUA_SENHA_CPANEL" (
   echo.
-  echo [ERRO] Configure a senha do cPanel em deploy-config.local!
-  echo Use a mesma senha que voce usa para acessar o cPanel.
+  echo [ERRO] Configure FTP_HOST, FTP_USER e FTP_PASS em deploy-config.local!
+  echo.
+  pause
+  exit /b 1
+)
+
+if "%FTP_USER%"=="SEU_USUARIO_FTP" (
+  echo.
+  echo [ERRO] Configure FTP_HOST, FTP_USER e FTP_PASS em deploy-config.local!
+  echo.
+  pause
+  exit /b 1
+)
+
+if "%FTP_HOST%"=="ftp.seu-dominio.com" (
+  echo.
+  echo [ERRO] Configure FTP_HOST, FTP_USER e FTP_PASS em deploy-config.local!
   echo.
   pause
   exit /b 1

@@ -6,19 +6,22 @@
   <title>Micro Fast Informática — 25 anos de experiência</title>
   <meta name="description" content="Micro Fast Informática — 25 anos em manutenção de computadores. Agora também criação de sites responsivos. Contato: WhatsApp." />
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/css/style-hitech.css">
+  <link rel="icon" href="assets/logo.svg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home">
-        <img src="assets/logo.png" alt="Logo Micro Fast Informática" class="logo">
+        <img src="assets/logo.svg" alt="Logo Micro Fast Informática" class="logo">
         <span class="brand-text"></span>
       </a>
       <nav class="nav" id="nav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema do site">
+          <i class="fas fa-microchip"></i> Modo Tech
+        </button>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰</button>
         <ul class="nav-list" id="navList">
           <li><a href="#home" class="nav-link">Home</a></li>
@@ -30,6 +33,7 @@
       </nav>
     </div>
   </header>
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
   <main>
     <!-- HERO -->
@@ -50,7 +54,7 @@
           </ul>
         </div>
         <div class="hero-right">
-          <img src="assets/images/hero.jpg" alt="Técnico de informática trabalhando" loading="lazy">
+          <img src="assets/images/hero.svg" alt="Apresentacao visual da Micro Fast Informatica" loading="lazy">
         </div>
       </div>
     </section>
@@ -62,17 +66,17 @@
         <p class="section-sub">Soluções completas para empresas e clientes residenciais.</p>
         <div class="services-grid">
           <article class="service-card">
-            <img src="assets/images/service-hardware.jpg" alt="Manutenção de hardware" loading="lazy">
+            <img src="assets/images/placeholder-card.svg" alt="Manutenção de hardware" loading="lazy">
             <h3>Manutenção de Computadores</h3>
             <p>Diagnóstico, reparo, upgrade e manutenção preventiva para desktops e notebooks.</p>
           </article>
           <article class="service-card">
-            <img src="assets/images/service-web.jpg" alt="Criação de sites" loading="lazy">
+            <img src="assets/images/placeholder-card.svg" alt="Criacao de sites" loading="lazy">
             <h3>Criação de Sites</h3>
             <p>Sites responsivos em HTML/CSS/JS, landing pages e suporte contínuo.</p>
           </article>
           <article class="service-card">
-            <img src="assets/images/team.jpg" alt="Suporte e redes" loading="lazy">
+            <img src="assets/images/placeholder-card.svg" alt="Suporte e redes" loading="lazy">
             <h3>Redes e Suporte</h3>
             <p>Instalação e configuração de redes locais, impressão e consultoria técnica.</p>
           </article>
@@ -87,7 +91,7 @@
           <h2>Sobre — Antonio Rodrigo</h2>
           <p>Sou técnico em informática com experiência desde 2000. Atuo por muitos anos na Micro Fast Informática realizando montagem, manutenção, formatação, configuração de redes e contratos de suporte técnico. Recentemente ampliei meus serviços oferecendo desenvolvimento de sites responsivos usando HTML, CSS e JavaScript.</p>
 
-          <h3>Resumo do currículo</h3>
+          <h3>Experiencia e qualificacoes</h3>
           <ul>
             <li><strong>Formação:</strong> Técnico em Informática (SENAI); cursando Tecnologia em Análise e Desenvolvimento de Sistemas (UNISANTOS).</li>
             <li><strong>Qualificações:</strong> Montagem e configuração de computadores, troubleshooting, cabeamento estruturado e suporte avançado.</li>
@@ -105,15 +109,12 @@
   <a class="btn" href="https://www.instagram.com/microfastinformatica/" target="_blank" rel="noopener">
     <i class="fab fa-instagram"></i> Instagram
   </a>
-  <a class="btn" href="assets/Curriculum%20Antonio%20Rodrigo.pdf" download>
-    <i class="fas fa-file-pdf"></i> Baixar CV
-  </a>
 </div>
 
         </div>
 
         <div class="about-photo">
-          <img src="assets/images/team2.jpg" alt="Foto de equipe técnica" loading="lazy">
+          <img src="assets/images/placeholder-card.svg" alt="Foto de equipe tecnica" loading="lazy">
         </div>
       </div>
     </section>
@@ -127,12 +128,12 @@
         <div class="portfolio-grid" id="portfolioGrid">
           <!-- Card exemplo; duplique e altere conforme necessário -->
           <article class="portfolio-card">
-            <img src="assets/images/portfolio-placeholder.jpg" alt="Projeto exemplo" loading="lazy">
+            <img src="assets/images/placeholder-card.svg" alt="Projeto exemplo" loading="lazy">
             <div class="portfolio-body">
               <h3>Projeto de Manutenção - Escola X</h3>
               <p>Atualização de discos, formatação em lote e instalação de softwares essenciais em 50 máquinas.</p>
               <div class="portfolio-actions">
-                <button class="btn small" data-title="Projeto de Manutenção - Escola X" data-img="assets/images/portfolio-placeholder.jpg" data-desc="Atualização de SSDs e padronização de imagens" onclick="openPortfolioModal(this)">Ver</button>
+                <button class="btn small" data-title="Projeto de Manutenção - Escola X" data-img="assets/images/placeholder-card.svg" data-desc="Atualização de SSDs e padronização de imagens" onclick="openPortfolioModal(this)">Ver</button>
               </div>
             </div>
           </article>

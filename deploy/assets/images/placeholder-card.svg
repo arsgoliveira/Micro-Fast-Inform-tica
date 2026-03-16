@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem ilustrativa</title>
+  <desc id="desc">Placeholder visual para cards e portfolio do site.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f4fb"/>
+      <stop offset="100%" stop-color="#c9e9fb"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0e7ab3"/>
+      <stop offset="100%" stop-color="#39baf3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="28" fill="url(#bg)"/>
+  <rect x="72" y="72" width="656" height="376" rx="20" fill="#ffffff"/>
+  <rect x="118" y="122" width="240" height="180" rx="16" fill="url(#accent)" opacity="0.18"/>
+  <rect x="402" y="138" width="198" height="22" rx="11" fill="#0e7ab3" opacity="0.9"/>
+  <rect x="402" y="188" width="246" height="18" rx="9" fill="#7aaec8"/>
+  <rect x="402" y="222" width="214" height="18" rx="9" fill="#7aaec8"/>
+  <rect x="402" y="256" width="172" height="18" rx="9" fill="#7aaec8"/>
+  <rect x="118" y="344" width="530" height="20" rx="10" fill="#d4eaf6"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0b5f8a">MICRO FAST</text>
+  <text x="400" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#5e7f92">Imagem ilustrativa do projeto</text>
+</svg>

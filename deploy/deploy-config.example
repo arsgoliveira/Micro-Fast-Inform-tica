@@ -1,4 +1,4 @@
-FTP_HOST=ftp.seu-dominio.com
-FTP_USER=seu_usuario_ftp
+FTP_HOST=ftp.microfastinformatica.online
+FTP_USER=hg2b2794
 FTP_PASS=sua_senha_cpanel
 REMOTE_PATH=public_html

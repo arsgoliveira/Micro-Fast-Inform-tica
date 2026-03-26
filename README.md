@@ -1,61 +1,81 @@
-# Micro Fast Informatica
+# Micro Fast Informática — Site Institucional
 
-Site institucional da Micro Fast Informatica, desenvolvido para apresentar servicos, reforcar credibilidade da marca e facilitar o contato comercial.
+Site institucional da **Micro Fast Informática**, empresa com 25 anos de experiência em manutenção de computadores, redes e criação de sites em Santos, SP.
 
-## Preview
+## Estrutura do Projeto
 
-- Site: [microfastinformatica.online](https://microfastinformatica.online/)
-- Repositorio: [arsgoliveira/Micro-Fast-Inform-tica](https://github.com/arsgoliveira/Micro-Fast-Inform-tica)
-
-## Sobre o projeto
-
-Este projeto foi construido como um site estatico, com foco em carregamento rapido, navegacao simples e apresentacao profissional dos servicos da Micro Fast Informatica.
-
-A pagina principal destaca:
-- manutencao de computadores
-- criacao de sites
-- redes e suporte tecnico
-- canais de contato
-- portfolio inicial
-
-## Funcionalidades
-
-- Hero com CTA para WhatsApp
-- Menu responsivo para mobile
-- Tema claro e tema hi-tech
-- Secao institucional com experiencia e qualificacoes
-- Portfolio com modal
-- Formulario com validacao em tempo real
-- Envio via `mailto`
-- Botao flutuante de WhatsApp
-- `robots.txt` e `sitemap.xml`
-- Scripts de deploy para hospedagem tradicional
-
-## Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-
-## Estrutura do projeto
-
-```text
-deploy/
-├── index.html
+```
+micro-fast/
+├── index.html              # Página principal
+├── portfolio.html          # Portfólio de sites desenvolvidos
+├── ferramentas.html        # Ferramentas úteis para clientes
 ├── assets/
 │   ├── css/
-│   │   ├── style.css
-│   │   └── style-hitech.css
-│   ├── images/
+│   │   └── style.css       # Estilos globais + componentes
 │   ├── js/
-│   │   └── main.js
-│   └── logo.svg
-├── .htaccess
-├── .gitignore
-├── deploy-agora.ps1
-├── deploy-config.example
-├── deploy-hostgator.bat
-├── robots.txt
-├── sitemap.xml
+│   │   └── main.js         # Comportamentos e interações
+│   └── images/             # Imagens do site
+│       └── (adicionar imagens aqui)
 └── README.md
+```
+
+## Tecnologias
+
+- HTML5 semântico
+- CSS3 com variáveis customizadas (sem frameworks)
+- JavaScript vanilla (sem dependências)
+- Google Fonts (Sora + DM Sans)
+
+## Como rodar localmente
+
+```bash
+# Clonar o repositório
+git clone https://github.com/arsgoliveira/micro-fast-informatica.git
+
+# Abrir com Live Server (VS Code) ou qualquer servidor local
+# Ou simplesmente abrir o index.html no navegador
+```
+
+## Deploy
+
+O site está hospedado em: [microfastinformatica.online](https://microfastinformatica.online)
+
+Compatível com qualquer hospedagem estática:
+- **Vercel** — `vercel deploy`
+- **Netlify** — arrastar a pasta ou conectar ao GitHub
+- **GitHub Pages** — ativar nas configurações do repositório
+
+## Imagens necessárias
+
+Adicionar as seguintes imagens na pasta `assets/images/`:
+
+| Arquivo | Tamanho sugerido | Descrição |
+|---|---|---|
+| `hero.jpg` | 1200×800px | Técnico trabalhando em computador |
+| `about.jpg` | 800×600px | Foto do Antonio Rodrigo |
+| `service-hardware.jpg` | 600×400px | Manutenção de hardware |
+| `service-web.jpg` | 600×400px | Criação de sites |
+| `service-network.jpg` | 600×400px | Redes e suporte |
+| `logo.png` | 200×60px (transparente) | Logo principal |
+| `og-image.jpg` | 1200×630px | Imagem para redes sociais |
+
+## Personalização
+
+As principais variáveis de cor e fonte estão no topo do `style.css`:
+
+```css
+:root {
+  --color-accent: #E07B2A;    /* Laranja — cor principal */
+  --color-dark: #0D1117;      /* Fundo escuro */
+  --font-display: 'Sora';     /* Títulos */
+  --font-body: 'DM Sans';     /* Texto corrido */
+}
+```
+
+## Contato
+
+**Antonio Rodrigo** · [contato@microfastinformatica.online](mailto:contato@microfastinformatica.online)
+
+LinkedIn: [linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a](https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/)
+
+GitHub: [github.com/arsgoliveira](https://github.com/arsgoliveira)

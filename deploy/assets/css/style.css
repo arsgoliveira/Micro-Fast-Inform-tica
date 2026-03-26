@@ -93,7 +93,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--color-text-primary);
   background: var(--color-bg);
@@ -122,7 +122,7 @@ button {
 
 input, textarea, select {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -136,10 +136,10 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-h1 { font-size: clamp(26px, 4vw, 38px); }
-h2 { font-size: clamp(22px, 3vw, 30px); }
-h3 { font-size: clamp(16px, 2vw, 20px); }
-h4 { font-size: 16px; }
+h1 { font-size: clamp(30px, 4.5vw, 44px); }
+h2 { font-size: clamp(26px, 3.5vw, 36px); }
+h3 { font-size: clamp(18px, 2.5vw, 24px); }
+h4 { font-size: 18px; }
 
 p { line-height: 1.75; }
 
@@ -166,7 +166,7 @@ p { line-height: 1.75; }
 /* Rótulo de seção (ex: "Serviços", "Sobre") */
 .section-label {
   display: inline-block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -181,13 +181,13 @@ p { line-height: 1.75; }
 
 .section-header__title {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: clamp(26px, 3.5vw, 36px);
   color: var(--color-text-primary);
   margin-bottom: 12px;
 }
 
 .section-header__sub {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--color-text-secondary);
   max-width: 480px;
   line-height: 1.7;
@@ -220,7 +220,7 @@ p { line-height: 1.75; }
   align-items: center;
   gap: 8px;
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   padding: 12px 22px;
   border-radius: var(--radius-md);
@@ -280,7 +280,7 @@ p { line-height: 1.75; }
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 20px;
@@ -379,7 +379,7 @@ p { line-height: 1.75; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
   letter-spacing: -0.5px;
@@ -391,13 +391,13 @@ p { line-height: 1.75; }
 
 .nav__logo-name {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: #fff;
 }
 
 .nav__logo-location {
-  font-size: 11px;
+  font-size: 13px;
   color: rgba(255,255,255,0.45);
 }
 
@@ -409,7 +409,7 @@ p { line-height: 1.75; }
 }
 
 .nav__link {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255,255,255,0.6);
   transition: color var(--transition);
   position: relative;
@@ -529,7 +529,7 @@ p { line-height: 1.75; }
 
 .hero__bg-ring-label {
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--color-accent);
   text-align: center;
@@ -549,7 +549,7 @@ p { line-height: 1.75; }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4.5vw, 44px);
+  font-size: clamp(32px, 5vw, 52px);
   font-weight: 600;
   color: #F0EDE8;
   line-height: 1.2;
@@ -562,7 +562,7 @@ p { line-height: 1.75; }
 }
 
 .hero__description {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255,255,255,0.55);
   line-height: 1.75;
   max-width: 460px;
@@ -587,7 +587,7 @@ p { line-height: 1.75; }
 
 .hero-stat__number {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   color: #F0EDE8;
   line-height: 1;
@@ -600,7 +600,7 @@ p { line-height: 1.75; }
 }
 
 .hero-stat__label {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255,255,255,0.4);
 }
 
@@ -625,14 +625,14 @@ p { line-height: 1.75; }
 
 .service-card__title {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: 10px;
 }
 
 .service-card__desc {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 20px;
@@ -643,7 +643,7 @@ p { line-height: 1.75; }
 }
 
 .service-card__list li {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   padding: 5px 0;
   display: flex;
@@ -664,7 +664,7 @@ p { line-height: 1.75; }
 
 .service-card__tag {
   display: inline-block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   background: var(--color-accent-light);
   color: #B86018;
@@ -689,13 +689,13 @@ p { line-height: 1.75; }
 
 .testimonial-card__stars {
   color: var(--color-accent);
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 2px;
   margin-bottom: 14px;
 }
 
 .testimonial-card__text {
-  font-size: 14px;
+  font-size: 16px;
   font-style: italic;
   color: var(--color-text-secondary);
   line-height: 1.75;
@@ -716,7 +716,7 @@ p { line-height: 1.75; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   flex-shrink: 0;
 }
@@ -727,13 +727,13 @@ p { line-height: 1.75; }
 .avatar--amber  { background: #FAEEDA; color: #854F0B; }
 
 .testimonial-card__name {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--color-text-primary);
 }
 
 .testimonial-card__role {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-muted);
 }
 
@@ -750,7 +750,7 @@ p { line-height: 1.75; }
 }
 
 .about__text p {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
@@ -761,7 +761,7 @@ p { line-height: 1.75; }
   border-left: 3px solid var(--color-accent);
   padding: 12px 20px;
   margin: 24px 0;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--color-text-primary);
   line-height: 1.65;
@@ -813,7 +813,7 @@ p { line-height: 1.75; }
 }
 
 .timeline__year {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.05em;
@@ -821,14 +821,14 @@ p { line-height: 1.75; }
 }
 
 .timeline__title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text-primary);
   margin-bottom: 2px;
 }
 
 .timeline__desc {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
@@ -917,14 +917,14 @@ p { line-height: 1.75; }
 
 .portfolio-preview__name {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: 4px;
 }
 
 .portfolio-preview__type {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-muted);
 }
 
@@ -961,7 +961,7 @@ p { line-height: 1.75; }
 .contact__info-item:last-child  { border-bottom: none; }
 
 .contact__info-label {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--color-text-muted);
   margin-bottom: 3px;
   text-transform: uppercase;
@@ -969,7 +969,7 @@ p { line-height: 1.75; }
 }
 
 .contact__info-value {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text-primary);
 }
@@ -1016,7 +1016,7 @@ p { line-height: 1.75; }
 
 .form-group label {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-text-secondary);
   margin-bottom: 6px;
@@ -1072,7 +1072,7 @@ p { line-height: 1.75; }
 
 /* Feedback de envio */
 .form__feedback {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   padding: 8px;
   border-radius: var(--radius-sm);
@@ -1111,7 +1111,7 @@ p { line-height: 1.75; }
 }
 
 .footer__copy {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255,255,255,0.35);
 }
 
@@ -1126,7 +1126,7 @@ p { line-height: 1.75; }
 }
 
 .footer__link {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255,255,255,0.35);
   transition: color var(--transition);
 }
@@ -1194,13 +1194,13 @@ p { line-height: 1.75; }
 
 .portfolio-item__title {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .portfolio-item__desc {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.65;
   margin-bottom: 14px;
@@ -1213,7 +1213,7 @@ p { line-height: 1.75; }
 }
 
 .portfolio-item__tag {
-  font-size: 11px;
+  font-size: 13px;
   background: var(--color-bg-secondary);
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
@@ -1249,12 +1249,12 @@ p { line-height: 1.75; }
 
 .tool-card__title {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 
 .tool-card__desc {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.65;
   flex: 1;

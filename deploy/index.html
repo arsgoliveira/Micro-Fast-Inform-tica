@@ -1,261 +1,771 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Micro Fast Informática — 25 anos de experiência</title>
-  <meta name="description" content="Micro Fast Informática — 25 anos em manutenção de computadores. Agora também criação de sites responsivos. Contato: WhatsApp." />
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- SEO básico -->
+  <title>Micro Fast Informática — Manutenção de Computadores e Criação de Sites em Santos, SP</title>
+  <meta name="description" content="25 anos de experiência em manutenção de computadores, redes e criação de sites em Santos, SP. Orçamento grátis. Atendimento em até 48h." />
+  <meta name="keywords"    content="manutenção computador Santos, técnico informática Santos, criação de sites Santos SP, redes corporativas Baixada Santista" />
+  <meta name="author"      content="Antonio Rodrigo — Micro Fast Informática" />
+  <link rel="canonical"    href="https://microfastinformatica.online/" />
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://microfastinformatica.online/" />
+  <meta property="og:title"       content="Micro Fast Informática — Santos, SP" />
+  <meta property="og:description" content="25 anos cuidando de quem trabalha com tecnologia. Manutenção, redes e sites em Santos." />
+  <meta property="og:image"       content="https://microfastinformatica.online/assets/images/og-image.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Favicon (substituir pelo real) -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+  <!-- Fonte: Sora (títulos) + DM Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home">
-        <img src="assets/logo.png" alt="Logo Micro Fast Informática" class="logo">
-        <span class="brand-text"></span>
-      </a>
-      <nav class="nav" id="nav">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰</button>
-        <ul class="nav-list" id="navList">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#services" class="nav-link">Serviços</a></li>
-          <li><a href="#about" class="nav-link">Experiência</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-          <li><a href="#contact" class="nav-link">Contato</a></li>
+
+  <!-- ======================================================================
+       NAVEGAÇÃO
+       ====================================================================== -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <div class="container nav__inner">
+
+        <!-- Logo -->
+        <a href="#home" class="nav__logo" aria-label="Ir para o início">
+          <div class="nav__logo-icon" aria-hidden="true">MF</div>
+          <div class="nav__logo-text">
+            <div class="nav__logo-name">Micro Fast</div>
+            <div class="nav__logo-location">Informática · Santos, SP</div>
+          </div>
+        </a>
+
+        <!-- Links desktop -->
+        <ul class="nav__links" role="list">
+          <li><a href="#home"         class="nav__link active">Home</a></li>
+          <li><a href="#services"     class="nav__link">Serviços</a></li>
+          <li><a href="#about"        class="nav__link">Sobre</a></li>
+          <li><a href="portfolio.html" class="nav__link">Portfólio</a></li>
+          <li><a href="ferramentas.html" class="nav__link">Ferramentas</a></li>
+          <li><a href="#contact"      class="nav__link">Contato</a></li>
         </ul>
+
+        <!-- CTA desktop -->
+        <a
+          href="https://api.whatsapp.com/send?phone=5513978264067&text=Ol%C3%A1%20Antonio,%20gostaria%20de%20um%20or%C3%A7amento."
+          class="btn btn--primary nav__cta"
+          target="_blank"
+          rel="noopener"
+          aria-label="Solicitar orçamento pelo WhatsApp"
+        >
+          <!-- Ícone WhatsApp -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Falar pelo WhatsApp
+        </a>
+
+        <!-- Hamburguer mobile -->
+        <button
+          class="nav__toggle"
+          aria-controls="nav-drawer"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div><!-- /.container -->
+
+      <!-- Drawer mobile -->
+      <nav
+        class="nav__drawer"
+        id="nav-drawer"
+        aria-label="Menu mobile"
+      >
+        <a href="#home"         class="nav__drawer-link">Home</a>
+        <a href="#services"     class="nav__drawer-link">Serviços</a>
+        <a href="#about"        class="nav__drawer-link">Sobre</a>
+        <a href="portfolio.html" class="nav__drawer-link">Portfólio</a>
+        <a href="ferramentas.html" class="nav__drawer-link">Ferramentas</a>
+        <a href="#contact"      class="nav__drawer-link">Contato</a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5513978264067"
+          class="btn btn--primary nav__drawer-cta"
+          target="_blank"
+          rel="noopener"
+        >
+          Falar pelo WhatsApp
+        </a>
       </nav>
-    </div>
+
+    </nav>
   </header>
 
+
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="hero-left">
-          <h1>25 anos de experiência em manutenção de computadores</h1>
-          <p>Cuidamos do hardware, redes e também desenvolvemos sites responsivos e modernos — tudo com atendimento próximo e transparente.</p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="https://wa.me/5513991368083?text=Olá%20Antonio,%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener">Contato via WhatsApp</a>
-            <a class="btn ghost" href="#services">Conhecer serviços</a>
+
+    <!-- ====================================================================
+         HERO
+         ==================================================================== -->
+    <section class="hero" id="home" aria-label="Apresentação">
+
+      <!-- Decoração de fundo -->
+      <div class="hero__bg-ring hero__bg-ring--1" aria-hidden="true"></div>
+      <div class="hero__bg-ring hero__bg-ring--2" aria-hidden="true"></div>
+      <div class="hero__bg-ring hero__bg-ring--3" aria-hidden="true">
+        <span class="hero__bg-ring-label">25<br>anos</span>
+      </div>
+
+      <div class="container">
+        <div class="hero__content">
+
+          <div class="hero__badge">
+            <span class="badge badge--accent badge--dot">Atendimento em Santos e Baixada Santista</span>
           </div>
-          <ul class="badges">
-            <li>🔧 Montagem & manutenção</li>
-            <li>🌐 Criação de sites</li>
-            <li>📞 Suporte e contrato</li>
-          </ul>
-        </div>
-        <div class="hero-right">
-          <img src="assets/images/hero.jpg" alt="Técnico de informática trabalhando" loading="lazy">
-        </div>
-      </div>
+
+          <h1 class="hero__title">
+            Seu computador com problema?<br>
+            Resolvo em <em>até 48 horas.</em>
+          </h1>
+
+          <p class="hero__description">
+            Manutenção de hardware, redes e criação de sites com atendimento
+            próximo e transparente. Orçamento gratuito, sem compromisso.
+          </p>
+
+          <div class="hero__actions">
+            <a
+              href="https://api.whatsapp.com/send?phone=5513978264067&text=Ol%C3%A1%20Antonio,%20gostaria%20de%20um%20or%C3%A7amento."
+              class="btn btn--primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <!-- Ícone telefone -->
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+              </svg>
+              Solicitar orçamento
+            </a>
+            <a href="portfolio.html" class="btn btn--outline-dark">
+              Ver portfólio de sites →
+            </a>
+          </div>
+
+          <!-- Estatísticas -->
+          <div class="hero__stats" aria-label="Números da empresa">
+            <div class="hero-stat">
+              <div class="hero-stat__number"><em>+25</em> anos</div>
+              <div class="hero-stat__label">de experiência</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number"><em>+500</em></div>
+              <div class="hero-stat__label">equipamentos atendidos</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number"><em>48h</em></div>
+              <div class="hero-stat__label">prazo médio de entrega</div>
+            </div>
+          </div>
+
+        </div><!-- /.hero__content -->
+      </div><!-- /.container -->
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section services">
+
+    <!-- ====================================================================
+         SERVIÇOS
+         ==================================================================== -->
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="container">
-        <h2 class="section-title">Serviços</h2>
-        <p class="section-sub">Soluções completas para empresas e clientes residenciais.</p>
-        <div class="services-grid">
-          <article class="service-card">
-            <img src="assets/images/service-hardware.jpg" alt="Manutenção de hardware" loading="lazy">
-            <h3>Manutenção de Computadores</h3>
-            <p>Diagnóstico, reparo, upgrade e manutenção preventiva para desktops e notebooks.</p>
-          </article>
-          <article class="service-card">
-            <img src="assets/images/service-web.jpg" alt="Criação de sites" loading="lazy">
-            <h3>Criação de Sites</h3>
-            <p>Sites responsivos em HTML/CSS/JS, landing pages e suporte contínuo.</p>
-          </article>
-          <article class="service-card">
-            <img src="assets/images/team.jpg" alt="Suporte e redes" loading="lazy">
-            <h3>Redes e Suporte</h3>
-            <p>Instalação e configuração de redes locais, impressão e consultoria técnica.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-      <div class="container about-grid">
-        <div class="about-text">
-          <h2>Sobre — Antonio Rodrigo</h2>
-          <p>Sou técnico em informática com experiência desde 2000. Atuo por muitos anos na Micro Fast Informática realizando montagem, manutenção, formatação, configuração de redes e contratos de suporte técnico. Recentemente ampliei meus serviços oferecendo desenvolvimento de sites responsivos usando HTML, CSS e JavaScript.</p>
-
-          <h3>Resumo do currículo</h3>
-          <ul>
-            <li><strong>Formação:</strong> Técnico em Informática (SENAI); cursando Tecnologia em Análise e Desenvolvimento de Sistemas (UNISANTOS).</li>
-            <li><strong>Qualificações:</strong> Montagem e configuração de computadores, troubleshooting, cabeamento estruturado e suporte avançado.</li>
-            <li><strong>Soft skills:</strong> Proatividade, comunicação, empatia e capacidade de liderança.</li>
-            <li><strong>Experiência recente:</strong> Positivo Tecnologia -Técnico de suporte Corporativo (Jan 2025–Out 2025) e Micro Fast Informática (2000–2025).</li>
-          </ul>
-
-          <div class="links-row">
-  <a class="btn" href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/" target="_blank" rel="noopener">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-  <a class="btn" href="https://github.com/arsgoliveira" target="_blank" rel="noopener">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-  <a class="btn" href="https://www.instagram.com/microfastinformatica/" target="_blank" rel="noopener">
-    <i class="fab fa-instagram"></i> Instagram
-  </a>
-  <a class="btn" href="assets/Curriculum%20Antonio%20Rodrigo.pdf" download>
-    <i class="fas fa-file-pdf"></i> Baixar CV
-  </a>
-</div>
-
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Serviços</span>
+          <h2 class="section-header__title" id="services-title">O que posso fazer por você</h2>
+          <p class="section-header__sub">
+            Soluções para empresas e residências em Santos e Grande Santos.
+            Orçamento sem compromisso em qualquer serviço.
+          </p>
         </div>
 
-        <div class="about-photo">
-          <img src="assets/images/team2.jpg" alt="Foto de equipe técnica" loading="lazy">
-        </div>
-      </div>
-    </section>
+        <div class="services__grid">
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section portfolio">
-      <div class="container">
-        <h2 class="section-title">Portfólio</h2>
-        <p class="section-sub">Projetos e serviços — Em construção.</p>
-
-        <div class="portfolio-grid" id="portfolioGrid">
-          <!-- Card exemplo; duplique e altere conforme necessário -->
-          <article class="portfolio-card">
-            <img src="assets/images/portfolio-placeholder.jpg" alt="Projeto exemplo" loading="lazy">
-            <div class="portfolio-body">
-              <h3>Projeto de Manutenção - Escola X</h3>
-              <p>Atualização de discos, formatação em lote e instalação de softwares essenciais em 50 máquinas.</p>
-              <div class="portfolio-actions">
-                <button class="btn small" data-title="Projeto de Manutenção - Escola X" data-img="assets/images/portfolio-placeholder.jpg" data-desc="Atualização de SSDs e padronização de imagens" onclick="openPortfolioModal(this)">Ver</button>
+          <!-- Card 1: Manutenção -->
+          <article class="card service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
               </div>
+            </div>
+            <h3 class="service-card__title">Manutenção de Computadores</h3>
+            <p class="service-card__desc">
+              Diagnóstico preciso. Reparo garantido. Maioria dos problemas
+              resolvidos em até 2 dias úteis com transparência total.
+            </p>
+            <ul class="service-card__list">
+              <li>Diagnóstico gratuito e sem compromisso</li>
+              <li>Reparo de desktops e notebooks</li>
+              <li>Limpeza e manutenção preventiva</li>
+              <li>Upgrade de memória e armazenamento</li>
+              <li>Formatação e instalação de sistemas</li>
+            </ul>
+            <span class="service-card__tag">Prazo: 24–48h</span>
+          </article>
+
+          <!-- Card 2: Sites -->
+          <article class="card service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-card__title">Criação de Sites</h3>
+            <p class="service-card__desc">
+              Sites modernos que funcionam no celular, carregam rápido
+              e aparecem no Google — com suporte contínuo incluso.
+            </p>
+            <ul class="service-card__list">
+              <li>Landing pages e sites institucionais</li>
+              <li>100% responsivo para celular</li>
+              <li>Otimizado para SEO</li>
+              <li>Entrega em 7–15 dias úteis</li>
+              <li>Suporte e manutenção pós-entrega</li>
+            </ul>
+            <span class="service-card__tag">Entrega: 7–15 dias</span>
+          </article>
+
+          <!-- Card 3: Redes -->
+          <article class="card service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12.55a11 11 0 0114.08 0"/>
+                  <path d="M1.42 9a16 16 0 0121.16 0"/>
+                  <path d="M8.53 16.11a6 6 0 016.95 0"/>
+                  <circle cx="12" cy="20" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-card__title">Redes e Suporte Técnico</h3>
+            <p class="service-card__desc">
+              Rede lenta ou caindo? Configuração profissional de Wi-Fi,
+              cabeamento e impressoras para empresas e residências.
+            </p>
+            <ul class="service-card__list">
+              <li>Configuração de redes Wi-Fi e cabeadas</li>
+              <li>Cabeamento estruturado certificado</li>
+              <li>Instalação e configuração de impressoras</li>
+              <li>Suporte por contrato mensal</li>
+              <li>Atendimento remoto disponível</li>
+            </ul>
+            <span class="service-card__tag">Contrato disponível</span>
+          </article>
+
+        </div><!-- /.services__grid -->
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ====================================================================
+         DEPOIMENTOS
+         ==================================================================== -->
+    <section class="section section--alt" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="section-header__title" id="testimonials-title">O que os clientes dizem</h2>
+          <p class="section-header__sub">
+            Mais de 25 anos servindo empresas e famílias em Santos.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <!-- Depoimento 1 -->
+          <article class="card testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Meu notebook caiu e o Antonio recuperou tudo em dois dias.
+              Profissional, honesto e preço justo. Recomendo demais."
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar avatar--blue" aria-hidden="true">CR</div>
+              <div>
+                <div class="testimonial-card__name">Carlos R.</div>
+                <div class="testimonial-card__role">Cliente residencial</div>
+              </div>
+            </footer>
+          </article>
+
+          <!-- Depoimento 2 -->
+          <article class="card testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Contratamos para criar o site da nossa empresa e o resultado
+              superou as expectativas. Atendimento excelente do início ao fim."
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar avatar--green" aria-hidden="true">SP</div>
+              <div>
+                <div class="testimonial-card__name">Sandra P.</div>
+                <div class="testimonial-card__role">Gestora, Comércio local</div>
+              </div>
+            </footer>
+          </article>
+
+          <!-- Depoimento 3 -->
+          <article class="card testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Resolveu um problema de rede que outros técnicos não conseguiram.
+              Veio rápido, explicou tudo e o preço foi honesto."
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar avatar--amber" aria-hidden="true">MF</div>
+              <div>
+                <div class="testimonial-card__name">Marcos F.</div>
+                <div class="testimonial-card__role">Empresário, Santos</div>
+              </div>
+            </footer>
+          </article>
+
+        </div><!-- /.testimonials__grid -->
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ====================================================================
+         SOBRE
+         ==================================================================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+
+        <div class="about__grid">
+
+          <!-- Texto -->
+          <div class="about__text animate-on-scroll">
+            <span class="section-label">Nossa história</span>
+            <h2 class="section-header__title" id="about-title" style="margin-bottom: 20px;">
+              25 anos cuidando de quem trabalha com tecnologia
+            </h2>
+            <p>
+              A Micro Fast Informática nasceu em Santos em 2000, quando os
+              computadores ainda eram novidade para a maioria das famílias e
+              empresas. Desde então, evoluímos junto com a tecnologia — do
+              Windows 98 para a nuvem, do cabeamento à fibra, dos sites estáticos
+              ao React.
+            </p>
+            <div class="about__highlight">
+              Em mais de duas décadas, construímos reputação com uma só regra:
+              transparência total. Orçamento antes de qualquer serviço, sempre.
+            </div>
+            <p>
+              Hoje, além da manutenção especializada, desenvolvemos sites
+              modernos para empresas locais que querem crescer na internet.
+              Formado pelo SENAI e Impacta, cursando ADS na UNISANTOS.
+            </p>
+            <div class="about__actions">
+              <a href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/" class="btn btn--outline" target="_blank" rel="noopener">
+                LinkedIn →
+              </a>
+              <a href="https://github.com/arsgoliveira" class="btn btn--outline" target="_blank" rel="noopener">
+                GitHub →
+              </a>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="animate-on-scroll">
+            <div class="timeline" role="list" aria-label="Linha do tempo">
+
+              <div class="timeline__item" role="listitem">
+                <div class="timeline__year">2000</div>
+                <div class="timeline__title">Fundação da Micro Fast Informática</div>
+                <div class="timeline__desc">Início das atividades em Santos, SP, com foco em manutenção de hardware.</div>
+              </div>
+
+              <div class="timeline__item" role="listitem">
+                <div class="timeline__year">2005</div>
+                <div class="timeline__title">Expansão para redes corporativas</div>
+                <div class="timeline__desc">Início do atendimento a empresas com suporte técnico e redes locais.</div>
+              </div>
+
+              <div class="timeline__item" role="listitem">
+                <div class="timeline__year">2010</div>
+                <div class="timeline__title">Certificações SENAI e Impacta</div>
+                <div class="timeline__desc">Formação profissional em hardware, redes e cabeamento estruturado.</div>
+              </div>
+
+              <div class="timeline__item" role="listitem">
+                <div class="timeline__year">2022</div>
+                <div class="timeline__title">Sites responsivos no portfólio</div>
+                <div class="timeline__desc">Ampliação dos serviços com desenvolvimento web moderno (React, Next.js).</div>
+              </div>
+
+              <div class="timeline__item" role="listitem">
+                <div class="timeline__year">2025</div>
+                <div class="timeline__title">25 anos de história</div>
+                <div class="timeline__desc">Cursando ADS na UNISANTOS. Analista N2 na Hidromares By SGS.</div>
+              </div>
+
+            </div><!-- /.timeline -->
+          </div>
+
+        </div><!-- /.about__grid -->
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ====================================================================
+         PORTFÓLIO (preview)
+         ==================================================================== -->
+    <section class="section section--alt" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Portfólio</span>
+          <h2 class="section-header__title" id="portfolio-title">Sites entregues recentemente</h2>
+          <p class="section-header__sub">
+            Projetos desenvolvidos com HTML, CSS, JavaScript, React e Next.js.
+          </p>
+        </div>
+
+        <div class="portfolio-preview__grid">
+
+          <!-- Projeto 1 -->
+          <article class="card portfolio-preview__card animate-on-scroll">
+            <div class="portfolio-preview__thumb portfolio-preview__thumb--dark">
+              <!-- Substitua por um screenshot real: <img src="assets/images/projeto-1.jpg" alt="..."> -->
+              <div class="portfolio-preview__browser">
+                <div class="portfolio-preview__browser-bar">
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                </div>
+                <div class="portfolio-preview__browser-body">
+                  <div class="portfolio-preview__browser-line"></div>
+                  <div class="portfolio-preview__browser-line portfolio-preview__browser-line--short"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-preview__info">
+              <div class="portfolio-preview__name">Comércio Local Santos</div>
+              <div class="portfolio-preview__type">Landing page · HTML / CSS / JS</div>
             </div>
           </article>
 
-          <!-- espaço para mais cards -->
+          <!-- Projeto 2 -->
+          <article class="card portfolio-preview__card animate-on-scroll">
+            <div class="portfolio-preview__thumb portfolio-preview__thumb--purple">
+              <div class="portfolio-preview__browser">
+                <div class="portfolio-preview__browser-bar">
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                </div>
+                <div class="portfolio-preview__browser-body">
+                  <div class="portfolio-preview__browser-line portfolio-preview__browser-line--shorter"></div>
+                  <div class="portfolio-preview__browser-line"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-preview__info">
+              <div class="portfolio-preview__name">Site Institucional</div>
+              <div class="portfolio-preview__type">Site corporativo · React</div>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card portfolio-preview__card animate-on-scroll">
+            <div class="portfolio-preview__thumb portfolio-preview__thumb--teal">
+              <div class="portfolio-preview__browser">
+                <div class="portfolio-preview__browser-bar">
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                  <span class="portfolio-preview__browser-dot"></span>
+                </div>
+                <div class="portfolio-preview__browser-body">
+                  <div class="portfolio-preview__browser-line portfolio-preview__browser-line--short"></div>
+                  <div class="portfolio-preview__browser-line portfolio-preview__browser-line--shorter"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                  <div class="portfolio-preview__browser-filler"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-preview__info">
+              <div class="portfolio-preview__name">Portfólio Profissional</div>
+              <div class="portfolio-preview__type">Portfolio pessoal · Next.js</div>
+            </div>
+          </article>
+
+        </div><!-- /.portfolio-preview__grid -->
+
+        <div class="portfolio-preview__cta animate-on-scroll">
+          <a href="portfolio.html" class="btn btn--outline">
+            Ver portfólio completo →
+          </a>
         </div>
-      </div>
+
+      </div><!-- /.container -->
     </section>
 
-    <!-- CONTACT -->
-<section id="contact" class="section contact reveal">
-  <div class="container contact-grid">
 
-    <!-- CARD DE CONTATO -->
-    <div class="contact-card reveal delay-1">
-      <h2>Fale comigo</h2>
-      <p>Entre em contato pelo <strong>WhatsApp</strong>, <strong>telefone</strong>, <strong>e-mail</strong> ou preencha o formulário abaixo.</p>
+    <!-- ====================================================================
+         CONTATO
+         ==================================================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
 
-      <ul class="contact-list">
-        <li>
-          <i class="fab fa-whatsapp whatsapp-icon"></i>
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/5513991368083" target="_blank" rel="noopener">
-            +55 (13) 99136-8083
-          </a>
-        </li>
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Contato</span>
+          <h2 class="section-header__title" id="contact-title">Fale comigo</h2>
+          <p class="section-header__sub">
+            Atendo em Santos e Baixada Santista. Respondo em até 2 horas.
+          </p>
+        </div>
 
-        <li>
-          <i class="fas fa-phone phone-icon"></i>
-          <strong>Telefone:</strong>
-          <a href="tel:+5513991368083">+55 (13) 99136-8083</a>
-        </li>
+        <div class="contact__grid">
 
-        <li>
-          <i class="fas fa-envelope email-icon"></i>
-          <strong>E-mail:</strong>
-          <a href="mailto:argoliveira80@gmail.com">argoliveira80@gmail.com</a>
-        </li>
+          <!-- Info + Mapa -->
+          <div class="animate-on-scroll">
+            <div class="contact__info-list">
 
-        <li>
-          <i class="fas fa-map-marker-alt location-icon"></i>
-          <strong>Local:</strong> Santos, SP
-        </li>
-      </ul>
+              <div class="contact__info-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact__info-label">WhatsApp / Telefone</div>
+                  <div class="contact__info-value">
+                    <a href="https://wa.me/5513978264067" target="_blank" rel="noopener">
+                      (13) 97826-4067
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- REDES SOCIAIS -->
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/"
-           target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+              <div class="contact__info-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact__info-label">E-mail</div>
+                  <div class="contact__info-value">
+                    <a href="mailto:contato@microfastinformatica.online">
+                      contato@microfastinformatica.online
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-        <a href="https://github.com/arsgoliveira"
-           target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+              <div class="contact__info-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact__info-label">Localização</div>
+                  <div class="contact__info-value">Santos, SP — Baixada Santista</div>
+                </div>
+              </div>
 
-        <a href="https://www.instagram.com/microfastinformatica/"
-           target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
+            </div><!-- /.contact__info-list -->
 
-    <!-- FORMULÁRIO -->
-    <form class="contact-form reveal delay-2" id="contactForm" onsubmit="submitForm(event)">
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" required>
+            <!-- Mapa do Google -->
+            <!-- INSTRUÇÃO: Substituir o src pelo embed real do Google Maps:
+                 1. Acesse maps.google.com
+                 2. Pesquise "Santos, SP"
+                 3. Clique em Compartilhar > Incorporar mapa
+                 4. Copie o src do <iframe> e cole abaixo -->
+            <div class="contact__map" aria-label="Mapa de localização">
+              <iframe
+                src="https://maps.google.com/maps?q=Santos,+SP,+Brasil&z=13&output=embed"
+                title="Localização da Micro Fast Informática em Santos, SP"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required>
+          </div><!-- /coluna info -->
 
-      <label for="message">Mensagem</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+          <!-- Formulário -->
+          <div class="animate-on-scroll">
 
-      <div class="form-row">
-        <button type="submit" class="btn primary">
-          <i class="fas fa-paper-plane"></i> Enviar Mensagem
-        </button>
-        <a class="btn ghost"
-           href="https://wa.me/5513991368083?text=Olá%20Antonio,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
-           target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
-        </a>
-      </div>
+            <!-- INSTRUÇÃO: Troque o action pelo endpoint do Formspree ou Web3Forms:
+                 Formspree: https://formspree.io/f/SEU_ID
+                 Web3Forms: https://api.web3forms.com/submit (adicionar hidden input access_key) -->
+            <form
+              class="contact__form"
+              id="contact-form"
+              action="https://formspree.io/f/SEU_ID_AQUI"
+              method="POST"
+              novalidate
+              aria-label="Formulário de contato"
+            >
 
-      <p class="form-note"></p>
-    </form>
+              <!-- Honeypot anti-spam (campo oculto; bots preenchem, humanos não) -->
+              <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
 
-  </div>
-</section>
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Seu nome completo"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Tipo de serviço</label>
+                <select id="service" name="service">
+                  <option value="">Selecione…</option>
+                  <option value="manutencao">Manutenção de computador</option>
+                  <option value="site">Criação de site</option>
+                  <option value="redes">Redes e suporte técnico</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Descreva brevemente o que precisa…"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form__submit-row">
+                <button type="submit" class="btn btn--primary btn--submit">
+                  Enviar mensagem
+                </button>
+                <a
+                  href="https://wa.me/5513978264067?text=Ol%C3%A1%20Antonio,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os."
+                  class="btn btn--whatsapp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <!-- Ícone WhatsApp -->
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Chamar no WhatsApp
+                </a>
+              </div>
+
+              <!-- Feedback de envio -->
+              <div id="form-feedback" class="form__feedback" role="alert" aria-live="polite"></div>
+
+            </form>
+
+          </div><!-- /coluna formulário -->
+
+        </div><!-- /.contact__grid -->
+
+      </div><!-- /.container -->
+    </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <small>© <span id="year"></span> Micro Fast Informática — Todos os direitos reservados.</small>
-      <div class="footer-right">
-        <a href="mailto:argoliveira80@gmail.com">argoliveira80@gmail.com</a>
-        <span> | </span>
-        <a href="tel:+5513991368083">+55 (13) 99136-8083</a>
-      </div>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+
+      <p class="footer__copy">
+        © <span id="footer-year">2025</span>
+        <strong>Micro Fast Informática</strong> —
+        Santos, SP. Todos os direitos reservados.
+      </p>
+
+      <nav class="footer__links" aria-label="Links sociais">
+        <a
+          href="https://www.instagram.com/microfastinformatica/"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram da Micro Fast"
+        >Instagram</a>
+        <a
+          href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn do Antonio Rodrigo"
+        >LinkedIn</a>
+        <a
+          href="https://github.com/arsgoliveira"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub do Antonio Rodrigo"
+        >GitHub</a>
+      </nav>
+
     </div>
   </footer>
 
-  <!-- Portfolio modal -->
-  <div id="portfolioModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
-      <img id="modalImg" src="" alt="">
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
-    </div>
-  </div>
-
-  <!-- WhatsApp floating -->
-  <a class="whatsapp-fab" href="https://wa.me/5513991368083" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="white" d="M20.52 3.48A11.9 11.9 0 0012 .5C6.21.5 1.5 5.2 1.5 11c0 1.94.51 3.73 1.4 5.32L.5 23.5l7.45-2.35c1.48.4 3.02.61 4.55.61 5.79 0 10.5-4.7 10.5-10.5 0-3.03-1.18-5.85-3.48-7.78z"/></svg>
-  </a>
-
+  <!-- JavaScript -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Atualiza o ano no footer automaticamente -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
-
-
-

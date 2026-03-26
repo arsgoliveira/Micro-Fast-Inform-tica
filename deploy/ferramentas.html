@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ferramentas — Micro Fast Informática</title>
+  <meta name="description" content="Ferramentas úteis para clientes e técnicos de informática em Santos, SP." />
+  <link rel="canonical" href="https://microfastinformatica.online/ferramentas.html" />
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <div class="container nav__inner">
+        <a href="index.html#home" class="nav__logo" aria-label="Voltar ao início">
+          <div class="nav__logo-icon" aria-hidden="true">MF</div>
+          <div class="nav__logo-text">
+            <div class="nav__logo-name">Micro Fast</div>
+            <div class="nav__logo-location">Informática · Santos, SP</div>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html"          class="nav__link">Home</a></li>
+          <li><a href="index.html#services" class="nav__link">Serviços</a></li>
+          <li><a href="index.html#about"    class="nav__link">Sobre</a></li>
+          <li><a href="portfolio.html"      class="nav__link">Portfólio</a></li>
+          <li><a href="ferramentas.html"    class="nav__link active">Ferramentas</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contato</a></li>
+        </ul>
+        <a href="https://wa.me/5513978264067" class="btn btn--primary nav__cta" target="_blank" rel="noopener">
+          Falar pelo WhatsApp
+        </a>
+        <button class="nav__toggle" aria-controls="nav-drawer" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__drawer" id="nav-drawer" aria-label="Menu mobile">
+        <a href="index.html"          class="nav__drawer-link">Home</a>
+        <a href="index.html#services" class="nav__drawer-link">Serviços</a>
+        <a href="index.html#about"    class="nav__drawer-link">Sobre</a>
+        <a href="portfolio.html"      class="nav__drawer-link">Portfólio</a>
+        <a href="ferramentas.html"    class="nav__drawer-link">Ferramentas</a>
+        <a href="index.html#contact"  class="nav__drawer-link">Contato</a>
+        <a href="https://wa.me/5513978264067" class="btn btn--primary nav__drawer-cta" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- Header da página -->
+    <div class="tools-page__header">
+      <div class="container">
+        <span class="section-label">Ferramentas</span>
+        <h1 style="color: #F0EDE8; margin-bottom: 12px;">Ferramentas úteis</h1>
+        <p style="color: rgba(255,255,255,0.5); font-size: 16px; max-width: 480px;">
+          Recursos gratuitos que uso no dia a dia e recomendo para
+          clientes e outros técnicos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Ferramentas de diagnóstico -->
+    <section class="section" aria-labelledby="diag-title">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Diagnóstico</span>
+          <h2 class="section-header__title" id="diag-title">Diagnóstico de hardware</h2>
+          <p class="section-header__sub">
+            Para verificar temperatura, desempenho e saúde dos componentes.
+          </p>
+        </div>
+
+        <div class="tools__grid">
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">CPU-Z</h3>
+            <p class="tool-card__desc">
+              Exibe informações detalhadas do processador, memória RAM,
+              placa-mãe e placa de vídeo. Essencial para diagnóstico.
+            </p>
+            <a href="https://www.cpuid.com/softwares/cpu-z.html" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M9 9h6M9 12h6M9 15h4"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">HWiNFO</h3>
+            <p class="tool-card__desc">
+              Monitoramento em tempo real de temperatura, tensão e
+              frequência de todos os sensores do sistema.
+            </p>
+            <a href="https://www.hwinfo.com/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">CrystalDiskInfo</h3>
+            <p class="tool-card__desc">
+              Verifica a saúde do HD ou SSD via SMART e avisa quando
+              o disco está próximo de falhar.
+            </p>
+            <a href="https://crystalmark.info/en/software/crystaldiskinfo/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">MemTest86</h3>
+            <p class="tool-card__desc">
+              Testa a memória RAM em busca de erros físicos.
+              Indispensável para diagnosticar travamentos e telas azuis.
+            </p>
+            <a href="https://www.memtest86.com/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+        </div><!-- /.tools__grid -->
+
+      </div>
+    </section>
+
+
+    <!-- Ferramentas de manutenção -->
+    <section class="section section--alt" aria-labelledby="manut-title">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Manutenção</span>
+          <h2 class="section-header__title" id="manut-title">Limpeza e recuperação</h2>
+          <p class="section-header__sub">
+            Para manter o sistema limpo, rápido e seguro.
+          </p>
+        </div>
+
+        <div class="tools__grid">
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">BleachBit</h3>
+            <p class="tool-card__desc">
+              Limpeza profunda de arquivos temporários, cache e logs.
+              Alternativa gratuita ao CCleaner.
+            </p>
+            <a href="https://www.bleachbit.org/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4M12 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Malwarebytes</h3>
+            <p class="tool-card__desc">
+              Remoção de malware, adware e ransomware. Versão gratuita
+              suficiente para limpeza pontual.
+            </p>
+            <a href="https://www.malwarebytes.com/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Ventoy</h3>
+            <p class="tool-card__desc">
+              Cria pen drives bootáveis com múltiplas ISOs. Perfeito para
+              ter Windows, Linux e ferramentas de recuperação num único USB.
+            </p>
+            <a href="https://www.ventoy.net/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M4 4h16v16H4zM8 4v16M16 4v16M4 8h16M4 16h16"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Recuva</h3>
+            <p class="tool-card__desc">
+              Recuperação de arquivos deletados de HDs, SSDs e cartões
+              de memória. Muitas vezes salva dados importantes.
+            </p>
+            <a href="https://www.ccleaner.com/recuva" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Ferramentas de rede -->
+    <section class="section" aria-labelledby="net-title">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Redes</span>
+          <h2 class="section-header__title" id="net-title">Diagnóstico de rede</h2>
+          <p class="section-header__sub">
+            Para analisar, monitorar e solucionar problemas de rede.
+          </p>
+        </div>
+
+        <div class="tools__grid">
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0"/>
+                <circle cx="12" cy="20" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Wireshark</h3>
+            <p class="tool-card__desc">
+              Analisador de pacotes de rede. Útil para diagnosticar
+              problemas de conectividade e tráfego suspeito.
+            </p>
+            <a href="https://www.wireshark.org/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="15" rx="2"/>
+                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Advanced IP Scanner</h3>
+            <p class="tool-card__desc">
+              Escaneia todos os dispositivos conectados na rede local.
+              Mostra IP, MAC e nome de cada equipamento.
+            </p>
+            <a href="https://www.advanced-ip-scanner.com/br/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Download gratuito →
+            </a>
+          </article>
+
+          <article class="card tool-card animate-on-scroll">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="tool-card__title">Fast.com</h3>
+            <p class="tool-card__desc">
+              Teste de velocidade da internet simples e confiável.
+              Ideal para mostrar ao cliente a performance real da conexão.
+            </p>
+            <a href="https://fast.com/" class="btn btn--outline" target="_blank" rel="noopener" style="font-size: 13px; margin-top: auto;">
+              Acessar online →
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        © <span id="footer-year">2025</span>
+        <strong>Micro Fast Informática</strong> — Santos, SP.
+      </p>
+      <nav class="footer__links" aria-label="Links sociais">
+        <a href="https://www.instagram.com/microfastinformatica/" class="footer__link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/arsgoliveira" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

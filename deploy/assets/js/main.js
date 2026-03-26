@@ -1,315 +1,280 @@
-// main.js
-document.addEventListener('DOMContentLoaded', function () {
-  // Atualiza o ano no rodapé
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+/**
+ * Micro Fast Informática — main.js
+ * Autor: Antonio Rodrigo · arsgoliveira
+ * Versão: 2.0.0
+ *
+ * MÓDULOS:
+ * - NavScroll      : esconde/exibe nav ao rolar
+ * - NavDrawer      : abre/fecha menu mobile
+ * - ActiveNavLink  : marca o link ativo conforme a seção visível
+ * - ScrollAnimate  : revela elementos ao entrar na viewport
+ * - ContactForm    : validação e envio (com proteção anti-spam honeypot)
+ */
 
-  // Toggle tema Hi-Tech
-  const themeToggle = document.getElementById('themeToggle');
-  const THEME_KEY = 'microfast-theme';
-  const applyTheme = (isHitech) => {
-    if (isHitech) {
-      document.body.classList.add('theme-hitech');
-      if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
-    } else {
-      document.body.classList.remove('theme-hitech');
-      if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-microchip"></i> Modo Tech';
-    }
-  };
-  const saved = localStorage.getItem(THEME_KEY);
-  if (saved === 'hitech') applyTheme(true);
-  else if (themeToggle) applyTheme(false);
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const isHitech = document.body.classList.toggle('theme-hitech');
-      localStorage.setItem(THEME_KEY, isHitech ? 'hitech' : 'light');
-      applyTheme(isHitech);
-    });
-  }
+'use strict';
 
-  // Toggle menu mobile melhorado
-  const navToggle = document.getElementById('navToggle');
-  const navList = document.getElementById('navList');
-  const navOverlay = document.getElementById('navOverlay');
-  const body = document.body;
+/* ==========================================================================
+   UTILITÁRIOS
+   ========================================================================== */
 
-  function openMenu() {
-    navList.classList.add('active');
-    if (navOverlay) navOverlay.classList.add('active');
-    navToggle.setAttribute('aria-expanded', 'true');
-    body.style.overflow = 'hidden'; // Previne scroll do body
-  }
+/**
+ * Seleciona um único elemento. Atalho para querySelector.
+ * @param {string} selector
+ * @param {Element} [scope=document]
+ * @returns {Element|null}
+ */
+const qs  = (selector, scope = document) => scope.querySelector(selector);
 
-  function closeMenu() {
-    navList.classList.remove('active');
-    if (navOverlay) navOverlay.classList.remove('active');
-    navToggle.setAttribute('aria-expanded', 'false');
-    body.style.overflow = ''; // Restaura scroll
-  }
+/**
+ * Seleciona múltiplos elementos. Atalho para querySelectorAll.
+ * @param {string} selector
+ * @param {Element} [scope=document]
+ * @returns {NodeList}
+ */
+const qsa = (selector, scope = document) => scope.querySelectorAll(selector);
 
-  if (navToggle && navList) {
-    navToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
 
-    // Fechar ao clicar no overlay
-    if (navOverlay) {
-      navOverlay.addEventListener('click', closeMenu);
-    }
+/* ==========================================================================
+   MÓDULO: NavScroll
+   Adiciona classe .is-scrolled na nav quando a página é rolada > 20px.
+   Isso permite aplicar estilos diferenciados via CSS (ex: sombra extra).
+   ========================================================================== */
 
-    // Fechar ao clicar fora do menu
-    document.addEventListener('click', (e) => {
-      if (navList.classList.contains('active') && 
-          !navList.contains(e.target) && 
-          !navToggle.contains(e.target)) {
-        closeMenu();
-      }
-    });
-
-    // Fechar com ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navList.classList.contains('active')) {
-        closeMenu();
-      }
-    });
-
-    // Fechar menu ao clicar em link (já existe no código de rolagem suave)
-  }
-
-  // Destacar link ativo conforme rolagem
-  const sections = document.querySelectorAll('main section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const offset = 80;
+function initNavScroll() {
+  const nav = qs('.nav');
+  if (!nav) return;
 
   function onScroll() {
-    const pos = window.scrollY + offset;
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const bottom = top + sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      const link = document.querySelector('.nav-link[href="#' + id + '"]');
-      if (link) {
-        if (pos >= top && pos < bottom) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
-      }
-    });
+    nav.classList.toggle('is-scrolled', window.scrollY > 20);
   }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
 
-  // Rolagem suave
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Fechar menu mobile ao clicar em link
-        if (navList && navList.classList.contains('active')) {
-          navList.classList.remove('active');
-          if (navOverlay) navOverlay.classList.remove('active');
-          navToggle && navToggle.setAttribute('aria-expanded', 'false');
-          body.style.overflow = '';
-        }
-      }
-    });
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Verificar estado inicial
+}
+
+
+/* ==========================================================================
+   MÓDULO: NavDrawer
+   Controla o menu hamburguer no mobile.
+   ========================================================================== */
+
+function initNavDrawer() {
+  const toggle = qs('.nav__toggle');
+  const drawer = qs('.nav__drawer');
+  if (!toggle || !drawer) return;
+
+  function close() {
+    toggle.classList.remove('is-open');
+    drawer.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  function open() {
+    toggle.classList.add('is-open');
+    drawer.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Bloqueia scroll do body
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = drawer.classList.contains('is-open');
+    isOpen ? close() : open();
   });
 
-  // Modal do portfólio (para uso futuro)
-  window.openPortfolioModal = function (el) {
-    const title = el.dataset.title || '';
-    const img = el.dataset.img || '';
-    const desc = el.dataset.desc || '';
-    const modal = document.getElementById('portfolioModal');
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalImg').src = img;
-    document.getElementById('modalImg').alt = title;
-    document.getElementById('modalDesc').textContent = desc;
-    modal.setAttribute('aria-hidden', 'false');
-  };
+  // Fechar ao clicar em um link do drawer
+  qsa('.nav__drawer-link', drawer).forEach(link => {
+    link.addEventListener('click', close);
+  });
 
-  const modalClose = document.getElementById('modalClose');
-  const modal = document.getElementById('portfolioModal');
-  if (modalClose) {
-    modalClose.addEventListener('click', () => modal.setAttribute('aria-hidden', 'true'));
-  }
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.setAttribute('aria-hidden', 'true');
-    });
-  }
+  // Fechar ao pressionar ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
+}
 
-  // Validação em tempo real do formulário
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    const inputs = contactForm.querySelectorAll('input, textarea');
-    
-    function validateField(field) {
-      const value = field.value.trim();
-      let isValid = true;
-      let errorMessage = '';
 
-      // Remover classes anteriores
-      field.classList.remove('error', 'valid');
-      
-      // Remover ícones anteriores se existirem
-      const existingIcon = field.parentElement.querySelector('.field-icon');
-      if (existingIcon) existingIcon.remove();
-      
-      // Remover mensagens de erro anteriores
-      const existingError = field.parentElement.querySelector('.field-error');
-      if (existingError) existingError.remove();
+/* ==========================================================================
+   MÓDULO: ActiveNavLink
+   Observa qual seção está visível e marca o link correspondente como ativo.
+   ========================================================================== */
 
-      // Validação específica por campo
-      if (field.type === 'email') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (value && !emailRegex.test(value)) {
-          isValid = false;
-          errorMessage = 'Por favor, insira um e-mail válido';
-        }
-      } else if (field.type === 'text' && field.id === 'name') {
-        if (value && value.length < 2) {
-          isValid = false;
-          errorMessage = 'O nome deve ter pelo menos 2 caracteres';
-        }
-      } else if (field.tagName === 'TEXTAREA') {
-        if (value && value.length < 10) {
-          isValid = false;
-          errorMessage = 'A mensagem deve ter pelo menos 10 caracteres';
-        }
-      }
+function initActiveNavLink() {
+  const sections = qsa('section[id]');
+  const navLinks = qsa('.nav__link[href^="#"]');
+  if (!sections.length || !navLinks.length) return;
 
-      // Adicionar feedback visual
-      if (value) {
-        if (isValid && field.checkValidity()) {
-          field.classList.add('valid');
-          // Criar ícone de sucesso
-          const icon = document.createElement('i');
-          icon.className = 'field-icon valid fas fa-check-circle';
-          field.parentElement.appendChild(icon);
-        } else {
-          field.classList.add('error');
-          // Criar ícone de erro
-          const icon = document.createElement('i');
-          icon.className = 'field-icon error fas fa-exclamation-circle';
-          field.parentElement.appendChild(icon);
-        }
-      }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
 
-      // Adicionar mensagem de erro se necessário
-      if (!isValid || (value && !field.checkValidity())) {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'field-error active';
-        errorDiv.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${errorMessage || 'Por favor, preencha este campo corretamente'}`;
-        field.parentElement.appendChild(errorDiv);
-      }
-
-      return isValid;
-    }
-
-    // Validar em tempo real
-    inputs.forEach(input => {
-      // Criar wrapper se não existir
-      if (!input.parentElement.classList.contains('field-wrapper')) {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'field-wrapper';
-        input.parentNode.insertBefore(wrapper, input);
-        wrapper.appendChild(input);
-      }
-
-      input.addEventListener('blur', () => validateField(input));
-      input.addEventListener('input', function() {
-        // Limpar estado de erro ao começar a digitar
-        if (this.classList.contains('error')) {
-          const errorMsg = this.parentElement.querySelector('.field-error');
-          if (errorMsg) errorMsg.remove();
-          this.classList.remove('error');
-          const icon = this.parentElement.querySelector('.field-icon.error');
-          if (icon) icon.remove();
-        }
-        if (this.value.trim()) {
-          validateField(this);
-        }
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
       });
     });
+  }, {
+    rootMargin: '-30% 0px -60% 0px'
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+
+/* ==========================================================================
+   MÓDULO: ScrollAnimate
+   Usa IntersectionObserver para revelar elementos com classe .animate-on-scroll
+   quando eles entram na viewport.
+   ========================================================================== */
+
+function initScrollAnimate() {
+  const elements = qsa('.animate-on-scroll');
+  if (!elements.length) return;
+
+  // Fallback: se o browser não suportar IntersectionObserver, mostrar tudo
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('is-visible'));
+    return;
   }
 
-  // Envio de formulário de contato (mailto)
-  window.submitForm = function (e) {
-    e.preventDefault();
-    const f = e.target;
-    const name = f.name.value.trim();
-    const email = f.email.value.trim();
-    const message = f.message.value.trim();
-
-    // Validar todos os campos antes de enviar
-    let allValid = true;
-    const inputs = f.querySelectorAll('input, textarea');
-    
-    inputs.forEach(input => {
-      // Trigger blur para validação
-      input.dispatchEvent(new Event('blur'));
-      if (!input.checkValidity() || input.classList.contains('error')) {
-        allValid = false;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Animar só uma vez
       }
     });
+  }, {
+    threshold: 0.12
+  });
 
-    if (!allValid) {
-      const note = f.querySelector('.form-note');
-      if (note) {
-        note.textContent = 'Por favor, preencha todos os campos corretamente.';
-        note.style.color = '#dc2626';
-      }
+  elements.forEach(el => observer.observe(el));
+}
+
+
+/* ==========================================================================
+   MÓDULO: ContactForm
+   Validação básica e submissão do formulário de contato.
+   
+   NOTA: Para funcionar de verdade, configure um dos seguintes serviços de
+   formulário no campo action do <form>:
+     - Formspree.io   → action="https://formspree.io/f/SEU_ID"
+     - Web3Forms.com  → action="https://api.web3forms.com/submit"
+     - EmailJS        → via SDK no script
+   ========================================================================== */
+
+function initContactForm() {
+  const form     = qs('#contact-form');
+  const feedback = qs('#form-feedback');
+  if (!form) return;
+
+  /**
+   * Valida os campos obrigatórios.
+   * @returns {{ valid: boolean, message: string }}
+   */
+  function validate() {
+    const name    = qs('[name="name"]', form).value.trim();
+    const email   = qs('[name="email"]', form).value.trim();
+    const message = qs('[name="message"]', form).value.trim();
+    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name)              return { valid: false, message: 'Por favor, informe seu nome.' };
+    if (!emailRx.test(email)) return { valid: false, message: 'Por favor, informe um e-mail válido.' };
+    if (message.length < 10) return { valid: false, message: 'A mensagem deve ter pelo menos 10 caracteres.' };
+
+    return { valid: true, message: '' };
+  }
+
+  /**
+   * Exibe o feedback de resultado para o usuário.
+   * @param {string} msg
+   * @param {'success'|'error'} type
+   */
+  function showFeedback(msg, type) {
+    if (!feedback) return;
+    feedback.textContent = msg;
+    feedback.className = `form__feedback is-${type}`;
+    setTimeout(() => { feedback.className = 'form__feedback'; }, 6000);
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    // Honeypot anti-spam: se o campo oculto estiver preenchido, é bot
+    const honeypot = qs('[name="_honeypot"]', form);
+    if (honeypot && honeypot.value) return;
+
+    const { valid, message } = validate();
+    if (!valid) {
+      showFeedback(message, 'error');
       return;
     }
 
-    const encodedName = encodeURIComponent(name);
-    const encodedEmail = encodeURIComponent(email);
-    const encodedMessage = encodeURIComponent(message);
-    const subject = encodeURIComponent("Contato pelo site - " + name);
-    const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`);
+    const submitBtn = qs('[type="submit"]', form);
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
 
-    // Abre o cliente de e-mail padrão
-    window.location.href = `mailto:argoliveira80@gmail.com?subject=${subject}&body=${body}`;
-
-    // Feedback visual no formulário
-    const note = f.querySelector('.form-note');
-    if (note) {
-      note.textContent = 'Mensagem preparada com sucesso! Seu cliente de e-mail será aberto.';
-      note.style.color = '#16a34a';
-    }
-
-    f.reset();
-    // Limpar classes de validação
-    inputs.forEach(input => {
-      input.classList.remove('error', 'valid');
-      const icon = input.parentElement.querySelector('.field-icon');
-      if (icon) icon.remove();
-      const errorMsg = input.parentElement.querySelector('.field-error');
-      if (errorMsg) errorMsg.remove();
-    });
-  };
-
-  // Animação de entrada ao rolar (reveal)
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // ativa uma vez
-        }
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
       });
-    },
-    { threshold: 0.15 }
-  );
-  reveals.forEach(el => observer.observe(el));
+
+      if (response.ok) {
+        showFeedback('Mensagem enviada! Retornarei em até 2 horas.', 'success');
+        form.reset();
+      } else {
+        throw new Error('Resposta não-ok do servidor');
+      }
+    } catch {
+      showFeedback('Erro ao enviar. Tente pelo WhatsApp.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+}
+
+
+/* ==========================================================================
+   MÓDULO: SmoothScroll
+   Rolagem suave para links âncora internos (#section).
+   Desconta a altura da nav fixa no offset.
+   ========================================================================== */
+
+function initSmoothScroll() {
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const targetId = link.getAttribute('href');
+    if (targetId === '#') return;
+
+    const target = qs(targetId);
+    if (!target) return;
+
+    e.preventDefault();
+
+    const nav    = qs('.nav');
+    const offset = nav ? nav.offsetHeight : 0;
+    const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+}
+
+
+/* ==========================================================================
+   INIT — Inicializa todos os módulos após o DOM estar pronto
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNavScroll();
+  initNavDrawer();
+  initActiveNavLink();
+  initScrollAnimate();
+  initContactForm();
+  initSmoothScroll();
 });

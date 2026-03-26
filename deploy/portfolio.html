@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfólio — Micro Fast Informática</title>
+  <meta name="description" content="Sites desenvolvidos pela Micro Fast Informática. Landing pages, sites institucionais e portfólios em HTML, React e Next.js — Santos, SP." />
+  <link rel="canonical" href="https://microfastinformatica.online/portfolio.html" />
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAV (idêntica ao index) -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <div class="container nav__inner">
+        <a href="index.html#home" class="nav__logo" aria-label="Voltar ao início">
+          <div class="nav__logo-icon" aria-hidden="true">MF</div>
+          <div class="nav__logo-text">
+            <div class="nav__logo-name">Micro Fast</div>
+            <div class="nav__logo-location">Informática · Santos, SP</div>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#home"     class="nav__link">Home</a></li>
+          <li><a href="index.html#services" class="nav__link">Serviços</a></li>
+          <li><a href="index.html#about"    class="nav__link">Sobre</a></li>
+          <li><a href="portfolio.html"      class="nav__link active">Portfólio</a></li>
+          <li><a href="ferramentas.html"    class="nav__link">Ferramentas</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contato</a></li>
+        </ul>
+        <a
+          href="https://api.whatsapp.com/send?phone=5513978264067"
+          class="btn btn--primary nav__cta"
+          target="_blank"
+          rel="noopener"
+        >Falar pelo WhatsApp</a>
+        <button class="nav__toggle" aria-controls="nav-drawer" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__drawer" id="nav-drawer" aria-label="Menu mobile">
+        <a href="index.html"          class="nav__drawer-link">Home</a>
+        <a href="index.html#services" class="nav__drawer-link">Serviços</a>
+        <a href="index.html#about"    class="nav__drawer-link">Sobre</a>
+        <a href="portfolio.html"      class="nav__drawer-link">Portfólio</a>
+        <a href="ferramentas.html"    class="nav__drawer-link">Ferramentas</a>
+        <a href="index.html#contact"  class="nav__drawer-link">Contato</a>
+        <a href="https://wa.me/5513978264067" class="btn btn--primary nav__drawer-cta" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- Header da página -->
+    <div class="portfolio-page__header">
+      <div class="container">
+        <span class="section-label">Portfólio</span>
+        <h1 style="color: #F0EDE8; margin-bottom: 12px;">Sites desenvolvidos</h1>
+        <p style="color: rgba(255,255,255,0.5); font-size: 16px; max-width: 480px;">
+          Projetos entregues com foco em performance, responsividade
+          e resultado para o cliente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid de projetos -->
+    <section class="section" aria-label="Projetos">
+      <div class="container">
+        <div class="portfolio-page__grid">
+
+          <!-- ============================================================
+               INSTRUÇÃO: Duplicar este bloco para cada projeto.
+               Substituir:
+                 - portfolio-item__thumb → adicionar <img src="..." alt="...">
+                 - portfolio-item__title → nome do projeto
+                 - portfolio-item__desc  → descrição breve
+                 - portfolio-item__tag   → tecnologias usadas
+                 - o link do botão       → URL do projeto ao vivo
+               ============================================================ -->
+
+          <!-- Projeto 1 -->
+          <article class="card portfolio-item animate-on-scroll">
+            <div class="portfolio-item__thumb portfolio-preview__thumb--dark">
+              <!-- <img src="assets/images/projeto-comércio-local.jpg" alt="Screenshot do site Comércio Local Santos" /> -->
+              <!-- Placeholder até adicionar screenshot real: -->
+              <div style="font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; padding: 16px;">
+                Adicionar screenshot<br>assets/images/projeto-1.jpg
+              </div>
+            </div>
+            <div class="portfolio-item__body">
+              <h2 class="portfolio-item__title">Comércio Local Santos</h2>
+              <p class="portfolio-item__desc">
+                Landing page para comércio local com foco em conversão,
+                seção de produtos, depoimentos e formulário de contato.
+              </p>
+              <div class="portfolio-item__tags">
+                <span class="portfolio-item__tag">HTML5</span>
+                <span class="portfolio-item__tag">CSS3</span>
+                <span class="portfolio-item__tag">JavaScript</span>
+              </div>
+              <!-- <a href="https://URL-DO-PROJETO.com" class="btn btn--outline" target="_blank" rel="noopener" style="margin-top:16px; font-size: 13px;">Ver projeto →</a> -->
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="card portfolio-item animate-on-scroll">
+            <div class="portfolio-item__thumb portfolio-preview__thumb--purple">
+              <div style="font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; padding: 16px;">
+                Adicionar screenshot<br>assets/images/projeto-2.jpg
+              </div>
+            </div>
+            <div class="portfolio-item__body">
+              <h2 class="portfolio-item__title">Site Institucional</h2>
+              <p class="portfolio-item__desc">
+                Site corporativo com múltiplas seções, integração com
+                WhatsApp e painel de administração simples.
+              </p>
+              <div class="portfolio-item__tags">
+                <span class="portfolio-item__tag">React</span>
+                <span class="portfolio-item__tag">Tailwind CSS</span>
+                <span class="portfolio-item__tag">Vercel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card portfolio-item animate-on-scroll">
+            <div class="portfolio-item__thumb portfolio-preview__thumb--teal">
+              <div style="font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; padding: 16px;">
+                Adicionar screenshot<br>assets/images/projeto-3.jpg
+              </div>
+            </div>
+            <div class="portfolio-item__body">
+              <h2 class="portfolio-item__title">Portfólio Profissional</h2>
+              <p class="portfolio-item__desc">
+                Site portfólio pessoal com modo claro/escuro,
+                listagem de projetos dinâmica e SEO otimizado.
+              </p>
+              <div class="portfolio-item__tags">
+                <span class="portfolio-item__tag">Next.js</span>
+                <span class="portfolio-item__tag">TypeScript</span>
+                <span class="portfolio-item__tag">Vercel</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.portfolio-page__grid -->
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="section section--alt" aria-label="CTA portfólio">
+      <div class="container" style="text-align: center;">
+        <h2 style="margin-bottom: 12px;">Precisa de um site?</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: 28px; max-width: 420px; margin-left: auto; margin-right: auto;">
+          Fale comigo e receba um orçamento sem compromisso em até 24 horas.
+        </p>
+        <a
+          href="https://wa.me/5513978264067?text=Ol%C3%A1%20Antonio,%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site."
+          class="btn btn--primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Solicitar orçamento →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        © <span id="footer-year">2025</span>
+        <strong>Micro Fast Informática</strong> — Santos, SP.
+      </p>
+      <nav class="footer__links" aria-label="Links sociais">
+        <a href="https://www.instagram.com/microfastinformatica/" class="footer__link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/antonio-rodrigo-gomes-de-oliveira-55240134a/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/arsgoliveira" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

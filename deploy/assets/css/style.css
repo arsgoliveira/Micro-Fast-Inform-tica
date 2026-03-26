@@ -1161,6 +1161,12 @@ p { line-height: 1.75; }
   overflow: hidden;
 }
 
+.portfolio-item__thumb-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
 .portfolio-item__thumb {
   height: 200px;
   background: var(--color-bg-secondary);
